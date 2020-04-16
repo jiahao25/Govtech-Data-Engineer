@@ -24,16 +24,20 @@ def transform_df(df):
 	df['above_100'] = df['price'].apply(lambda x: True if x>100 else False)
 
 	# reorder columns
-	df = df[['first_name','last_name','price','above_100']]
+	df_new = df[['first_name','last_name','price','above_100']]
 
 	#print(df.info())
 	#print(df)
 
 	return df_new
 
+def save_data(df):
+	df.to_csv('data_processed.csv')
+
 if __name__ == '__main__':
 	dataset = 'dataset.csv'
 	df = load_dataset(dataset)
 	df_new = transform_df(df)
+	save_data(df_new)
 
 
