@@ -10,4 +10,3 @@ See the python file for the code.
 
 ##### Step 2: 
 
-![Image of Entity Relationship Diagram] (https://raw.githubusercontent.com/jiahao25/Govtech-Data-Engineer-Test/master/entity%20relationship%20diagram.JPG)
