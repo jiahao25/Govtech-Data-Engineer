@@ -17,18 +17,18 @@ See the python file for the code.
 The following diagram shows the data infrastructure of the company operations on Google Cloud Platform.
 
 The services are categorized into 4 categories.
-Red: Non-streaming services
-Green: Streaming services
-Yellow: Connectors, usually data warehouses and databases
-Grey: Data batch services, such as HDFS Solutions
+- Red: Non-streaming services
+- Green: Streaming services
+- Yellow: Connectors, usually data warehouses and databases
+- Grey: Data batch services, such as HDFS Solutions
 
 Within the Kafka Cluster, there are many topics. I will illustrate the design of one topic (Business Intelligence).
 
 The diagram has 4 categories and we connect these apps/processes into the respective Kafka APIs:
-Red: Producers
-Green: Stream Processes
-Yellow: Connectors
-Grey: Consumers
+- Red: Producers
+- Green: Stream Processes
+- Yellow: Connectors
+- Grey: Consumers
 
 In this example (Business Intelligence topic),
 
