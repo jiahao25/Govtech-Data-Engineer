@@ -26,10 +26,8 @@ airflow webserver -p 8080
 # start the scheduler
 airflow scheduler
 ```
-
 #### Lastly, i created the DAG file to create the schedule patterns (1am).
 See `scheduling.py ` for the code.
-
 Make sure to save the Python script as `~/airflow/dags/scheduling.py` and then run the terminal command `python ~/airflow/dags/scheduling.py`. 
 
 
@@ -37,10 +35,10 @@ Make sure to save the Python script as `~/airflow/dags/scheduling.py` and then r
 Entity Relationship Diagram
 ![Entity Relationship Diagram](https://raw.githubusercontent.com/jiahao25/Govtech-Data-Engineer-Test/master/images/Entity%20relationship%20diagram%203.JPG "Entity Relationship Diagram")
 
-#### Step 1: Write SQL files to create tables
+#### Firstly, i write the SQL file to create the fields and the relationship between the tables.
 See `carDealership.sql`
 
-#### Step 2: Create a Dockerfile
+#### Next is to create a Dockerfile for the building of the image. See the code below.
 ```
 #pull base image
 FROM postgres
@@ -53,10 +51,10 @@ ENV POSTGRES_PASSWORD postgres
 COPY carDealership.sql /docker-entrypoint-initdb.d/
 ```
 
-#### Step 3: Build image and launch container
-Build the image where the Dockerfile lies using the terminal command `docker build -t [imagename] .`
+#### After the Dockerfile is written, build the image and launch the container.
+Step 1: Build the image where the Dockerfile lies using the terminal command `docker build -t [imagename] .`
 
-Then run the container using the command `$ docker run -d --name [containername] -p [internal_port]:5432 [imagename]`.
+Step 2: Run the container using the command `$ docker run -d --name [containername] -p [internal_port]:5432 [imagename]`.
 
 ## Section 3: System Design
 
