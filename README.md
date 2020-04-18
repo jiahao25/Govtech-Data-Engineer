@@ -1,13 +1,12 @@
 ### Section 1: Data Pipelines
 
 - Python file: `transform_data.py`
-- Raw data: `dataset.csv`
 - Processed data: `data_processed.csv`
 
-##### Step 1: Create the data processing functions in Python
+#### Step 1: Create the data processing functions in Python
 See `transform_data.py`
 
-##### Step 2: On a Linux terminal, run the following commands at a chosen directory.
+#### Step 2: On a Linux terminal, run the following commands at a chosen directory.
 ```
 # (choose the directory)
 export AIRFLOW_HOME=~/airflow
@@ -26,16 +25,17 @@ airflow scheduler
 ```
 Then visit localhost:8080 in the browser to enable the example dag in the home page
 
-##### Step 3: Create DAG file
+#### Step 3: Create DAG file
 See `scheduling.py `.
 
 Save the Python script as ~/airflow/dags/scheduling.py .
 
 Then run the command `python ~/airflow/dags/tutorial.py`
 
+
 ### Section 2: Databases
 
-### Section 1: System Design
+### Section 3: System Design
 
 The following diagram shows the data infrastructure of the company operations on Google Cloud Platform.
 
