@@ -34,12 +34,13 @@ Then run the command `python ~/airflow/dags/tutorial.py`
 
 
 ### Section 2: Databases
-
+Entity Relationship Diagram
 ![Entity Relationship Diagram](https://raw.githubusercontent.com/jiahao25/Govtech-Data-Engineer-Test/master/images/entity%20relationship%20diagram.JPG "Entity Relationship Diagram")
 
 ### Section 3: System Design
 
 The following diagram shows the data infrastructure of the company operations on Google Cloud Platform.
+![](https://raw.githubusercontent.com/jiahao25/Govtech-Data-Engineer-Test/master/images/architecture.JPG "Data infrastructure")
 
 The services are categorized into 4 categories.
 - Red: Non-streaming services
@@ -48,6 +49,8 @@ The services are categorized into 4 categories.
 - Grey: Data batch services, such as HDFS Solutions
 
 Within the Kafka Cluster, there are many topics. I will illustrate the design of one topic (Business Intelligence).
+![](https://raw.githubusercontent.com/jiahao25/Govtech-Data-Engineer-Test/master/images/BItopic.JPG "Business Intelligence topic within Kafka Cluster")
+
 
 The diagram has 4 categories and we connect these apps/processes into the respective Kafka APIs:
 - Red: Producers
