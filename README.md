@@ -73,6 +73,7 @@ The services are categorized into 4 categories.
 Most services have both Producer and Consumer applications, as denoted by their double arrow.
 
 Within the Kafka Cluster, there are many Topics, each provides different values to the company. I will illustrate the design of one Topic (Business Intelligence).
+
 ![](https://raw.githubusercontent.com/jiahao25/Govtech-Data-Engineer-Test/master/images/BItopic.JPG "Business Intelligence topic within Kafka Cluster")
 
 
@@ -91,3 +92,5 @@ Meanwhile, the web app (stream processes) will monitor the user's real time acti
 The connectors (databases) will keep update their values as changes are captured on images and user activities
 
 Lastly, the consumer applications will process the records and do analysis. Real time analytics applications will run on real time while BigQuery may run on a designated time period (eg: once a day).
+
+With this diagram, it highlights one main benefit of the Kafka cluster which is a distributed system.
