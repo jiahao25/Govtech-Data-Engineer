@@ -5,11 +5,11 @@
 - Processed data: `data_processed.csv`
 - DAG (scheduling) file: `scheduling.py`
 
-### Instructions
-#### Step 1: Create the data processing functions in Python
-See `transform_data.py`
+### Working Steps
+#### Firstly, I createed the data processing functions in Python
+See `transform_data.py` for the functions used.
 
-#### Step 2: On a Linux terminal, run the following commands at a chosen directory.
+#### Next, I start a scheduler instance using a Linux terminal by typing the commands below. Visit localhost:8080 to enable the example DAG.
 ```
 # (choose the directory)
 export AIRFLOW_HOME=~/airflow
@@ -26,14 +26,11 @@ airflow webserver -p 8080
 # start the scheduler
 airflow scheduler
 ```
-Then visit localhost:8080 in the browser to enable the example dag in the home page
 
-#### Step 3: Create DAG file
-See `scheduling.py `.
+#### Lastly, i created the DAG file to create the schedule patterns (1am).
+See `scheduling.py ` for the code.
 
-Save the Python script as ~/airflow/dags/scheduling.py .
-
-Then run the command `python ~/airflow/dags/tutorial.py`
+Make sure to save the Python script as `~/airflow/dags/scheduling.py` and then run the terminal command `python ~/airflow/dags/scheduling.py`. 
 
 
 ## Section 2: Databases
