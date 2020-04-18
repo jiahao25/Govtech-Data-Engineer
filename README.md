@@ -4,11 +4,34 @@
 - Raw data: `dataset.csv`
 - Processed data: `data_processed.csv`
 
-##### Step 1: Create the data processing functions in Python using Pandas 
+##### Step 1: Create the data processing functions in Python
+See `transform_data.py`
 
-See the python file for the code.
+##### Step 2: On a Linux terminal, run the following commands at a chosen directory.
+```
+# (choose the directory)
+export AIRFLOW_HOME=~/airflow
 
-##### Step 2: 
+# install from pypi using pip
+pip install apache-airflow
+
+# initialize the database
+airflow initdb
+
+# start the web server, default port is 8080
+airflow webserver -p 8080
+
+# start the scheduler
+airflow scheduler
+```
+Then visit localhost:8080 in the browser to enable the example dag in the home page
+
+##### Step 3: Create DAG file
+See `scheduling.py `.
+
+Save the Python script as ~/airflow/dags/scheduling.py .
+
+Then run the command `python ~/airflow/dags/tutorial.py`
 
 ### Section 2: Databases
 
