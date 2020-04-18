@@ -31,6 +31,7 @@ See `scheduling.py ` for the code.
 Make sure to save the Python script as `~/airflow/dags/scheduling.py` and then run the terminal command `python ~/airflow/dags/scheduling.py`. 
 
 
+
 ## Section 2: Databases
 Entity Relationship Diagram
 ![Entity Relationship Diagram](https://raw.githubusercontent.com/jiahao25/Govtech-Data-Engineer-Test/master/images/Entity%20relationship%20diagram%203.JPG "Entity Relationship Diagram")
@@ -56,6 +57,8 @@ Step 1: Build the image where the Dockerfile lies using the terminal command `do
 
 Step 2: Run the container using the command `$ docker run -d --name [containername] -p [internal_port]:5432 [imagename]`.
 
+
+
 ## Section 3: System Design
 
 The following diagram shows the data infrastructure of the company operations on Google Cloud Platform.
@@ -67,11 +70,13 @@ The services are categorized into 4 categories.
 - Yellow: Connectors, usually data warehouses and databases
 - Grey: Data batch services, such as HDFS Solutions
 
-Within the Kafka Cluster, there are many topics. I will illustrate the design of one topic (Business Intelligence).
+Most services have both Producer and Consumer applications, as denoted by their double arrow.
+
+Within the Kafka Cluster, there are many Topics, each provides different values to the company. I will illustrate the design of one Topic (Business Intelligence).
 ![](https://raw.githubusercontent.com/jiahao25/Govtech-Data-Engineer-Test/master/images/BItopic.JPG "Business Intelligence topic within Kafka Cluster")
 
 
-The diagram has 4 categories and we connect these apps/processes into the respective Kafka APIs:
+The diagram shows 4 categories and we can connect these apps/processes into the respective Kafka APIs:
 - Red: Producers
 - Green: Stream Processes
 - Yellow: Connectors
