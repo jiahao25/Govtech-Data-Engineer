@@ -40,6 +40,26 @@ Then run the command `python ~/airflow/dags/tutorial.py`
 Entity Relationship Diagram
 ![Entity Relationship Diagram](https://raw.githubusercontent.com/jiahao25/Govtech-Data-Engineer-Test/master/images/Entity%20relationship%20diagram%203.JPG "Entity Relationship Diagram")
 
+#### Step 1: Write SQL files to create tables
+See `carDealership.sql`
+
+#### Step 2: Create a Dockerfile
+```
+#pull base image
+FROM postgres
+MAINTAINER jiahao
+
+#set environmental variables
+ENV POSTGRES_PASSWORD postgres
+
+# copy sql file. the sql file will be run when the container runs.
+COPY carDealership.sql /docker-entrypoint-initdb.d/
+```
+
+#### Step 3: Build image and launch container
+Build the image where the Dockerfile lies using the terminal command `docker build -t [imagename] .`
+
+Then run the container using the command `$ docker run -d --name [containername] -p [internal_port]:5432 [imagename]`.
 
 ## Section 3: System Design
 
