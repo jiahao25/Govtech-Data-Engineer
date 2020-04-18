@@ -35,7 +35,7 @@ Then run the command `python ~/airflow/dags/tutorial.py`
 
 ### Section 2: Databases
 
-![](https://raw.githubusercontent.com/jiahao25/Govtech-Data-Engineer-Test/master/images/entity%20relationship%20diagram.JPG "Entity Relationship Diagram")
+![Entity Relationship Diagram](https://raw.githubusercontent.com/jiahao25/Govtech-Data-Engineer-Test/master/images/entity%20relationship%20diagram.JPG "Entity Relationship Diagram")
 
 ### Section 3: System Design
 
