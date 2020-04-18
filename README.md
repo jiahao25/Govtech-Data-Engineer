@@ -36,6 +36,7 @@ Then run the command `python ~/airflow/dags/tutorial.py`
 ### Section 2: Databases
 Entity Relationship Diagram
 ![Entity Relationship Diagram](https://raw.githubusercontent.com/jiahao25/Govtech-Data-Engineer-Test/master/images/entity%20relationship%20diagram.JPG "Entity Relationship Diagram")
+Note: modelNameVariant is a unique field that comprises of 2 individual fields, *modelName* and *modelVariant*. The field is created by the concatenation of the 2 fields, for example a car model with model *beetle3* and variant *green* will have the field as *beetle3_green*.
 
 ### Section 3: System Design
 
