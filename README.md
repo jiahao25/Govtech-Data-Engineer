@@ -1,11 +1,11 @@
 ## Section 1: Data Pipelines
 
-#### **Files
+### Files
 - Data processing file: `transform_data.py`
 - Processed data: `data_processed.csv`
 - DAG (scheduling) file: `scheduling.py`
 
-#### **Instructions
+### Instructions
 #### Step 1: Create the data processing functions in Python
 See `transform_data.py`
 
